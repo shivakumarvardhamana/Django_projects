@@ -1,0 +1,14 @@
+<ul>
+	<!-- Iterate over object_list -->
+	{% for object in object_list %}
+	<!-- Display Objects -->
+	<li>{{ object.first_name }}</li>
+	<li>{{ object.last_name }}</li>
+	<li>{{object.location}}</li>
+
+	<hr/>
+	<!-- If object_list is empty -->
+	{% empty %}
+	
+	{% endfor %}
+</ul>
