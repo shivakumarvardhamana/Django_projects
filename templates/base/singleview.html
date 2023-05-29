@@ -1,6 +1,14 @@
 
-{%for object in mess%}
-<p>{{object.first_name}}</p>
-<p>{{object.last_name}}</p>
-<p>{{object.location}}</p>
-{%endfor%}
+<p>{{res.first_name}}</p>
+<p>{{res.last_name}}</p>
+<p>{{res.location}}</p>
+<p>{{res.id}}</p>
+<form action="{% url 'sound' %}" method="POST">
+    {%csrf_token%}
+    <input type="hidden" name="id" value="{{res.id}}">
+    <input type="submit" name="submit">
+</form>
+
+<p>{{res.first_name}}</p>
+<p>{{res.last_name}}</p>
+<p>{{res.location}}</p>

@@ -1,7 +1,10 @@
-<form method="post">
+<a class ="btn btn-sm" href="{% url 'testing' %}">iam mabbu</a>
+<br>
+<a href="{% url 'putter' 1%}" >hi</a>
 
-    <h5>iam temp</h5>
+<form action="{%url 'work' %}" method="POST">
     {%csrf_token%}
-    {{form.as_p}}
-    <input type="submit">
+    <input type="text" name="name">
+    <input type="submit" name="submit">
 </form>
+{{val}}
